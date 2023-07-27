@@ -20,7 +20,7 @@ function game() {
     var selectedColor = colorName[varNum]
     gameSeq.push(selectedColor)
     setTimeout(function(){
-        var audio = new Audio("sounds/"+ selectedColor + ".mp3")
+        var audio = new Audio(selectedColor + ".mp3")
         $("." + selectedColor).fadeOut(100)
         $("." + selectedColor).fadeIn(100)
         audio.play();
@@ -38,7 +38,7 @@ $(".btn").each(function(){
         setTimeout(function(){
             $("."+i).removeClass("pressed")
         }, 100)
-        var btnAudio = new Audio("sounds/" + i + ".mp3")
+        var btnAudio = new Audio(i + ".mp3")
         btnAudio.play()
         switch (gameSeq[colorSeq-1]) {
             case i:
@@ -61,7 +61,7 @@ $(".btn").each(function(){
 )
 
 function gameOver(){
-    var audio = new Audio("sounds/wrong.mp3")
+    var audio = new Audio("wrong.mp3")
     audio.play()
     $("h1").text("Game Over. Press any key to restart")
     $("body").addClass("game-over")
