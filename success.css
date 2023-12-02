@@ -153,7 +153,7 @@ li:nth-child(10){
 .bottomHalf {
   align-items: center;
   padding: 35px;
-  height: 200px;
+  height: auto;
 }
 .bottomHalf p {
   font-weight: 500;
@@ -176,6 +176,7 @@ button:hover {
 
 .bc{
     border-color: #d5bdaf !important;
+    height: auto;
 }
 
 #alertMO{
@@ -184,6 +185,11 @@ button:hover {
   
 }
 
+@media only screen and (max-width: 768px) {
+  .bottomHalf {
+    height: auto; /* Adjust the height to fit the content */
+  }
+}  
 /*
 background: -webkit-linear-gradient(45deg, #019871, #a0ebcf);
 */
